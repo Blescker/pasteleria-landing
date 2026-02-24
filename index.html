@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dulce Atelier — Pastelería Artesanal</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-logo" id="loaderLogo">Dulce Atelier</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loaderBar"></div>
+    </div>
+    <div class="loader-txt">Preparando tu experiencia...</div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="#about" class="mm-link">Nosotros</a>
+    <a href="#products" class="mm-link">Productos</a>
+    <a href="#process" class="mm-link">Proceso</a>
+    <a href="#testimonials" class="mm-link">Clientes</a>
+    <a href="#contact" class="mm-link">Contacto</a>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Dulce Atelier</a>
+    <ul class="nav-links">
+      <li><a href="#about">Nosotros</a></li>
+      <li><a href="#products">Productos</a></li>
+      <li><a href="#process">Proceso</a></li>
+      <li><a href="#testimonials">Clientes</a></li>
+    </ul>
+    <a href="#contact" class="nav-btn">Ordenar ahora</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Pastelería artesanal · Desde 2010</p>
+      <h1 class="hero-title">
+        <span class="line"><span>El Arte de</span></span>
+        <span class="line"><span>lo <em>Dulce</em></span></span>
+        <span class="line"><span>Perfecto</span></span>
+      </h1>
+      <p class="hero-sub">Creaciones únicas que despiertan los sentidos. Cada pieza, una obra maestra de sabor y elegancia.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-primary">Explorar menú</a>
+        <a href="#about" class="btn-outline">Nuestra historia</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" id="heroScroll">
+      <div class="scroll-bar"></div>
+      <span>Descubrir</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-inner">
+      <div class="marquee-item"><span class="marquee-dot"></span>Tortas Artesanales</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Macarons Franceses</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Postres Únicos</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Entregas a Domicilio</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Eventos y Bodas</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Ingredientes Premium</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Recetas Exclusivas</div>
+      <!-- duplicate for seamless loop -->
+      <div class="marquee-item"><span class="marquee-dot"></span>Tortas Artesanales</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Macarons Franceses</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Postres Únicos</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Entregas a Domicilio</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Eventos y Bodas</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Ingredientes Premium</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Recetas Exclusivas</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-img-wrap will-fade">
+      <div class="about-img-inner">
+        <div class="about-img-placeholder">
+          <canvas class="about-visual-canvas" id="about-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="section-eyebrow will-fade">Nuestra Historia</div>
+      <h2 class="section-title will-fade">Donde la <em>pasión</em><br>se convierte en arte</h2>
+      <p class="section-text will-fade">En Dulce Atelier, cada creación nace de la combinación perfecta entre tradición francesa y sabores latinoamericanos. Desde nuestro pequeño taller en el corazón de la ciudad, elaboramos con amor cada detalle.</p>
+      <p class="section-text will-fade">Utilizamos ingredientes de origen selecto, trabajados con técnicas de alta pastelería, para crear piezas que no solo son hermosas a la vista, sino inolvidables al paladar.</p>
+      <div class="about-signature will-fade">— Chef María Eugenia</div>
+      <div class="about-tag will-fade">✦ Alta pastelería · Ingredientes de origen</div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stat-cell will-fade">
+      <div class="stat-num" data-target="15" data-suffix="+">0</div>
+      <div class="stat-lbl">Años de experiencia</div>
+    </div>
+    <div class="stat-cell will-fade">
+      <div class="stat-num" data-target="5000" data-suffix="+">0</div>
+      <div class="stat-lbl">Clientes felices</div>
+    </div>
+    <div class="stat-cell will-fade">
+      <div class="stat-num" data-target="120" data-suffix="">0</div>
+      <div class="stat-lbl">Recetas únicas</div>
+    </div>
+    <div class="stat-cell will-fade">
+      <div class="stat-num" data-target="98" data-suffix="%">0</div>
+      <div class="stat-lbl">Satisfacción</div>
+    </div>
+  </div>
+
+  <!-- PARALLAX QUOTE -->
+  <div class="pq-section">
+    <div class="pq-bg" id="pqBg"></div>
+    <blockquote class="pq-quote">
+      "La pastelería es el arte de transformar ingredientes simples en momentos <span>extraordinarios</span>."
+    </blockquote>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="products-head">
+      <div>
+        <div class="section-eyebrow">Nuestra Selección</div>
+        <h2 class="section-title">Creaciones <em>Destacadas</em></h2>
+      </div>
+      <a href="#contact" class="btn-outline">Ver menú completo</a>
+    </div>
+    <div class="products-grid">
+
+      <div class="p-card will-fade">
+        <div class="p-card-img">
+          <div class="p-card-bg pbg-1"><div class="p-emoji">🎂</div></div>
+          <div class="p-card-info">
+            <div class="p-cat">Especialidad</div>
+            <div class="p-name">Torta Ópera</div>
+            <div class="p-desc">Capas de bizcocho de almendra, ganache de chocolate y crema de café</div>
+            <div class="p-price">$850</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- tall card -->
+      <div class="p-card will-fade">
+        <div class="p-card-img">
+          <div class="p-card-bg pbg-2"><div class="p-emoji">🍰</div></div>
+          <div class="p-card-info">
+            <div class="p-cat">Macarons</div>
+            <div class="p-name">Caja de Macarons</div>
+            <div class="p-desc">12 piezas de sabores seleccionados artesanalmente cada semana</div>
+            <div class="p-price">$650</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card will-fade">
+        <div class="p-card-img">
+          <div class="p-card-bg pbg-3"><div class="p-emoji">🧁</div></div>
+          <div class="p-card-info">
+            <div class="p-cat">Cupcakes</div>
+            <div class="p-name">Cupcakes Artisan</div>
+            <div class="p-desc">Masa húmeda con frosting de mantequilla y decoración premium</div>
+            <div class="p-price">$120 c/u</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card will-fade">
+        <div class="p-card-img">
+          <div class="p-card-bg pbg-4"><div class="p-emoji">🍩</div></div>
+          <div class="p-card-info">
+            <div class="p-cat">Donuts</div>
+            <div class="p-name">Donuts Gourmet</div>
+            <div class="p-desc">Masa brioche con coberturas de temporada y rellenos premium</div>
+            <div class="p-price">$180 c/u</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card will-fade">
+        <div class="p-card-img">
+          <div class="p-card-bg pbg-5"><div class="p-emoji">🍫</div></div>
+          <div class="p-card-info">
+            <div class="p-cat">Chocolatería</div>
+            <div class="p-name">Trufas de Chocolate</div>
+            <div class="p-desc">Ganache 70% cacao con acabados de oro comestible</div>
+            <div class="p-price">$90 c/u</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card will-fade">
+        <div class="p-card-img">
+          <div class="p-card-bg pbg-6"><div class="p-emoji">💍</div></div>
+          <div class="p-card-info">
+            <div class="p-cat">Eventos</div>
+            <div class="p-name">Torta de Boda</div>
+            <div class="p-desc">Diseño personalizado, múltiples pisos, sabores a elección</div>
+            <div class="p-price">Desde $3.500</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="process-inner">
+      <div class="process-head will-fade">
+        <div class="section-eyebrow">Nuestro Proceso</div>
+        <h2 class="section-title">Cómo <em>creamos</em> tu pedido</h2>
+      </div>
+      <div class="steps">
+        <div class="step will-fade">
+          <div class="step-num">01</div>
+          <h3 class="step-title">Consulta</h3>
+          <p class="step-desc">Nos contactás y conversamos sobre tu idea, ocasión y preferencias de sabor.</p>
+        </div>
+        <div class="step will-fade">
+          <div class="step-num">02</div>
+          <h3 class="step-title">Diseño</h3>
+          <p class="step-desc">Nuestro equipo crea un boceto personalizado según tu visión y estilo.</p>
+        </div>
+        <div class="step will-fade">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Elaboración</h3>
+          <p class="step-desc">Preparamos cada pieza con ingredientes premium y técnicas artesanales.</p>
+        </div>
+        <div class="step will-fade">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Entrega</h3>
+          <p class="step-desc">Tu creación llega perfecta, cuidadosamente empacada en tiempo y forma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="testimonials-head">
+      <div class="section-eyebrow">Testimonios</div>
+      <h2 class="section-title">Lo que dicen <em>nuestros clientes</em></h2>
+    </div>
+    <div class="tgrid">
+      <div class="t-card will-fade">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"La torta de nuestra boda fue absolutamente perfecta. Todos los invitados preguntaron de dónde era. Superó todas nuestras expectativas."</p>
+        <div class="t-author">
+          <div class="t-avatar">LC</div>
+          <div>
+            <div class="t-name">Laura &amp; Carlos</div>
+            <div class="t-detail">Boda — Diciembre 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="t-card will-fade">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Los macarons son simplemente increíbles. El nivel de detalle y la variedad de sabores me tiene siendo clienta fiel hace 3 años."</p>
+        <div class="t-author">
+          <div class="t-avatar">VP</div>
+          <div>
+            <div class="t-name">Valentina Pérez</div>
+            <div class="t-detail">Cliente frecuente</div>
+          </div>
+        </div>
+      </div>
+      <div class="t-card will-fade">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Pedí la torta de cumpleaños para mi mamá y quedé sin palabras. El sabor, la presentación, todo magistral. Sin dudas la mejor de la ciudad."</p>
+        <div class="t-author">
+          <div class="t-avatar">MR</div>
+          <div>
+            <div class="t-name">Matías Rodríguez</div>
+            <div class="t-detail">Buenos Aires</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <div class="cta-inner">
+      <div class="section-eyebrow" style="justify-content:center;">Comenzar</div>
+      <div class="cta-divider"></div>
+      <h2 class="cta-title will-fade">¿Lista para tu <em>creación perfecta?</em></h2>
+      <p class="cta-sub will-fade">Hacemos realidad tu visión dulce. Cada pedido es único, como vos. Contactanos hoy y comencemos a crear juntos.</p>
+      <a href="#contact" class="btn-primary will-fade">Hacer mi pedido</a>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-info">
+      <div class="section-eyebrow will-fade">Contacto</div>
+      <h2 class="section-title will-fade">Hablemos de tu<br><em>próximo pedido</em></h2>
+      <p class="section-text will-fade">Estamos para ayudarte a crear el postre perfecto para cada ocasión especial.</p>
+      <div class="c-detail will-fade">
+        <div class="c-icon">📍</div>
+        <div>
+          <div class="c-lbl">Dirección</div>
+          <div class="c-val">Av. Santa Fe 2450, Palermo<br>Buenos Aires, Argentina</div>
+        </div>
+      </div>
+      <div class="c-detail will-fade">
+        <div class="c-icon">⏰</div>
+        <div>
+          <div class="c-lbl">Horarios</div>
+          <div class="c-val">Lunes a Sábado: 9:00 – 20:00<br>Domingos: 10:00 – 15:00</div>
+        </div>
+      </div>
+      <div class="c-detail will-fade">
+        <div class="c-icon">📱</div>
+        <div>
+          <div class="c-lbl">WhatsApp</div>
+          <div class="c-val">+54 11 4567-8901</div>
+        </div>
+      </div>
+      <div class="c-detail will-fade">
+        <div class="c-icon">✉</div>
+        <div>
+          <div class="c-lbl">Email</div>
+          <div class="c-val">hola@dulceatelier.com</div>
+        </div>
+      </div>
+    </div>
+
+    <form class="will-fade" onsubmit="return false;">
+      <div class="f-row">
+        <div class="f-group">
+          <label>Nombre</label>
+          <input type="text" placeholder="Tu nombre" />
+        </div>
+        <div class="f-group">
+          <label>Teléfono</label>
+          <input type="tel" placeholder="+54 11..." />
+        </div>
+      </div>
+      <div class="f-group">
+        <label>Email</label>
+        <input type="email" placeholder="tu@email.com" />
+      </div>
+      <div class="f-group">
+        <label>Tipo de pedido</label>
+        <select>
+          <option value="">Seleccionar...</option>
+          <option>Torta de cumpleaños</option>
+          <option>Torta de boda</option>
+          <option>Cupcakes</option>
+          <option>Macarons</option>
+          <option>Caja de chocolates</option>
+          <option>Evento corporativo</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="f-group">
+        <label>Mensaje</label>
+        <textarea placeholder="Contanos tu idea, fecha del evento, cantidad de personas..."></textarea>
+      </div>
+      <button class="btn-submit">Enviar consulta</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="f-logo">Dulce Atelier</div>
+    <div style="text-align:center">
+      <ul class="f-links">
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#products">Menú</a></li>
+        <li><a href="#process">Proceso</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <p class="f-copy">© 2025 Dulce Atelier · Todos los derechos reservados</p>
+    </div>
+    <div class="f-social">
+      <a href="#" class="f-soc-link" aria-label="Instagram">IG</a>
+      <a href="#" class="f-soc-link" aria-label="Facebook">FB</a>
+      <a href="#" class="f-soc-link" aria-label="WhatsApp">WA</a>
+    </div>
+  </footer>
+
+  <!-- CDN Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <!-- App -->
+  <script src="js/main.js"></script>
+</body>
+</html>
